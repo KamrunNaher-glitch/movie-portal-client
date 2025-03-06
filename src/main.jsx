@@ -9,23 +9,47 @@ import {
 } from "react-router-dom";
 import AddMovie from './components/AddMovie/AddMovie.jsx';
 import UpdateMovie from './components/UpdateMovie/UpdateMovie.jsx';
+import Layout from './components/Layout/Layout.jsx';
+import Home from './components/Home/Home.jsx';
+import SignIn from './components/SignIn/SignIn.jsx';
+import SignUp from './components/SignUp/SignUp.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
-    loader:() => fetch('http://localhost:5000/movie')
+    element: <Layout></Layout>,
+    children: [
+
+      {
+        path: "/",
+        element:<Home></Home>,
+        loader: () => fetch('http://localhost:5000/movie')
+      },
+      {
+        path: "AddMovie",
+        element: <AddMovie></AddMovie>
+      },
+
+      {
+        path:'updateMovie/:id',
+        element: <UpdateMovie></UpdateMovie>,
+        loader:({params}) => fetch(`http://localhost:5000/movie/${params.id}`)
+      },
+      {
+        path: 'signIn',
+        element:<SignIn></SignIn>
+      },
+      {
+        path: 'SignUp',
+        element:<SignUp></SignUp>
+      }
+
+
+
+    ]
   },
-  {
-    path: "addMovie",
-    element: <AddMovie></AddMovie>
-  },
-  {
-    path:'updateMovie/:id',
-    element: <UpdateMovie></UpdateMovie>,
-    loader:({params}) => fetch(`http://localhost:5000/movie/${params.id}`)
-  }
+  
 
 
 
