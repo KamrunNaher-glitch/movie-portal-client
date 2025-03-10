@@ -21,7 +21,7 @@ const Banner = () => {
                         Where entertainment never stops! Discover the latest blockbusters, timeless classics, and binge-worthy TV shows, all in one place. Stay updated with reviews, ratings, and the hottest trends in cinema.
                     </p>
                     <button className="btn btn-primary px-6 py-2 text-sm sm:text-base md:text-lg">
-                        Watch Online
+                       Explore more
                     </button>
                 </div>
             </div>

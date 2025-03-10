@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 import MovieCard from '../MovieCard/MovieCard';
 import { useState } from 'react';
 import Banner from '../Banner/Banner';
+import Online from '../Online/Online';
 
 const Home = () => {
     const loadedMovies = useLoaderData();
@@ -22,7 +23,7 @@ const Home = () => {
       }
      
       </div>
-     
+     <Online></Online>
       
     </div>
     );
