@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 
 import MovieCard from '../MovieCard/MovieCard';
 import { useState } from 'react';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
     const loadedMovies = useLoaderData();
@@ -11,9 +12,9 @@ const Home = () => {
 
     return (
         <div className='m-20'>
-      
-      <h1 className='text-5xl text-purple-600 my-20'>Vite + React</h1>
-
+      <Banner></Banner>
+     
+      <h1 className=' font-bold text-7xl mb-8 text-center'>Featured Movies</h1>
       <div className='grid md:grid-cols-2 gap-4'>
       {
        movies.map(movie =><MovieCard key={movie._id} movie ={movie} movies={movies} setMovies={setMovies}
