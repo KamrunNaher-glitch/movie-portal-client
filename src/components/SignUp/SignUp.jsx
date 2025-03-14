@@ -18,7 +18,7 @@ const SignUp = () => {
           console.log('users created at fb',result.user);
           const createdAt = result?.user?.metadata?.creationTime;
           const newUser = {name,email,createdAt}
-          fetch('http://localhost:5000/users',{
+          fetch('https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/users',{
             method: 'POST',
             headers: {
               'content-type' : 'application/json'

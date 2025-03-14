@@ -15,7 +15,7 @@ const handleAddMovie = e =>{
     const newMovie = {title,genre,duration,releaseYear,rating,summary,poster}
     console.log(newMovie)
 
-    fetch('http://localhost:5000/movie',{
+    fetch('https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie',{
       method: 'POST',
       headers:{
         'content-type':'application/json'
@@ -104,4 +104,5 @@ const handleAddMovie = e =>{
 
  
 export default AddMovie;
+
 

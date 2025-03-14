@@ -14,7 +14,7 @@ const SignIn = () => {
     const lastSignInTime = result?.user?.metadata?.lastSignInTime;
     const loginInfo = {email,lastSignInTime};
 
-    fetch(`http://localhost:5000/users`,{
+    fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/users`,{
         method: 'PATCH',
         headers:{
           'content-type' :'application/json' 

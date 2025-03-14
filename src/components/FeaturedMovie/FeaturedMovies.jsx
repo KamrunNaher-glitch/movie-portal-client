@@ -5,7 +5,7 @@ const FeaturedMovies = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/movies")
+    fetch("https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movies")
       .then((res) => res.json())
       .then((data) => {
         const sortedMovies = data.sort((a, b) => b.rating - a.rating).slice(0, 6);

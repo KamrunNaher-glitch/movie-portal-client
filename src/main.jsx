@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
         loader: async () => {
-          const res = await fetch('http://localhost:5000/movie');
+          const res = await fetch('https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie');
           return res.json();  // ✅ Fix: Ensure it returns JSON
         },
       },
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         path: "movies/:id",
         element: <MovieDetails />,
         loader: async ({ params }) => {
-          const res = await fetch(`http://localhost:5000/movie/${params.id}`);
+          const res = await fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie/${params.id}`);
           return res.json();  // ✅ Fix: Ensure it returns JSON
         },
       },
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
         path: 'updateMovie/:id',
         element: <UpdateMovie />,
         loader: async ({ params }) => {
-          const res = await fetch(`http://localhost:5000/movie/${params.id}`); // ✅ Fix: Used backticks
+          const res = await fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie/${params.id}`); // ✅ Fix: Used backticks
           return res.json();  // ✅ Fix: Ensure it returns JSON
         },
       },
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         path: 'Users',
         element: <Users />,
         loader: async () => {
-          const res = await fetch('http://localhost:5000/users');
+          const res = await fetch('https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/users');
           return res.json();  // ✅ Fix: Ensure it returns JSON
         },
       },
@@ -83,7 +83,7 @@ const router = createBrowserRouter([
       {
         path: "movie/:id",
         element: <MovieDetails></MovieDetails>,
-       loader:({params}) => fetch(`http://localhost:5000/movie/${params.id}`)
+       loader:({params}) => fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie/${params.id}`)
       }
     ],
   },

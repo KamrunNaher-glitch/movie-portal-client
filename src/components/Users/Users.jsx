@@ -19,7 +19,7 @@ const Users = () => {
           }).then((result) => {
             if (result.isConfirmed) {
              
-              fetch(`http://localhost:5000/users/${id}`,{
+              fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/users/${id}`,{
                 method: 'DELETE'
               })  
               .then(res => res.json())
@@ -83,3 +83,5 @@ const Users = () => {
 };
 
 export default Users;
+
+

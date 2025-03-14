@@ -22,7 +22,7 @@ const UpdateMovie = () => {
         const updatedMovie = {title,genre,duration,releaseYear,rating,summary,poster}
         console.log(updatedMovie);
     
-        fetch(`http://localhost:5000/movie/${_id}`,{
+        fetch(`https://movie-portal-server-2c8ktqa1o-kamrun-nahers-projects.vercel.app/movie/${_id}`,{
           method: 'PUT',
           headers:{
             'content-type':'application/json'
